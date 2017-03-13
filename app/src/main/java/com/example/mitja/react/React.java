@@ -1,5 +1,6 @@
 package com.example.mitja.react;
 
+import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +10,10 @@ import android.widget.Button;
 import java.util.Random;
 
 public class React extends AppCompatActivity {
-    public int counter = 0;
-    public int konec = 0;
-    public int best = 10000;
+    int counter = 0;
+    int konec = 0;
+    int best = 10000;
+
     View view;
 
     @Override
@@ -30,6 +32,14 @@ public class React extends AppCompatActivity {
         view = this.getWindow().getDecorView();
         view.setBackgroundResource(R.color.druga);
         druga.setVisibility(View.INVISIBLE);
+
+        SharedPreferences preferences = getSharedPreferences("MyPreferences", 0);
+        best = preferences.getInt("best_time", 10000);
+        if (best == 10000){
+            label3.setVisibility(View.INVISIBLE);
+        }
+
+        label3.setText("Best time: " + Integer.toString(best));
 
         clicker.setOnClickListener(new View.OnClickListener() {
 
@@ -79,6 +89,9 @@ public class React extends AppCompatActivity {
                         if (konec<=best){
                             label3.setText("Best time: " + konec);
                             best = konec;
+                            SharedPreferences preferences = getSharedPreferences("MyPreferences", 0);
+                            preferences.edit().putInt("best_time", best).apply();
+                            label3.setVisibility(View.VISIBLE);
                         }
                         else{
                             label3.setText("Best time: " + best);
@@ -94,6 +107,8 @@ public class React extends AppCompatActivity {
                         if (konec<=best){
                             label3.setText("Best time: " + konec);
                             best = konec;
+                            SharedPreferences preferences = getSharedPreferences("MyPreferences", 0);
+                            preferences.edit().putInt("best_time", best).apply();
                         }
                         else{
                             label3.setText("Best time: " + best);

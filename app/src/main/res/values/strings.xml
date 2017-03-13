@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">React</string>
+    <string name="start_react">Start React</string>
 </resources>
