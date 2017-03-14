@@ -6,5 +6,10 @@
     <color name="druga">#7D7BFF</color>
     <color name="prva">#FC2D2D</color>
     <color name="zelena">#35FF8D</color>
+    <color name="greent">#00b300</color>
+    <color name="bluet">#6666ff</color>
+    <color name="redt">#b32d00</color>
+    <color name="redn">#661a00</color>
+    <color name="bluen">#004d99</color>
 
 </resources>

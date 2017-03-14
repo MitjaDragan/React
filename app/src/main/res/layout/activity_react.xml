@@ -18,9 +18,9 @@
         android:id="@+id/textView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:height="56dp"
-        android:textSize="40dp"
-        android:textColor="#65c6f7" />
+        android:height="96dp"
+        android:textSize="70dp"
+        android:textColor="#6666ff" />
 
     <Button
         android:layout_width="wrap_content"
@@ -53,10 +53,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Current time: 0"
         android:id="@+id/textView2"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
+        android:textSize="25dp"
+        android:textColor="#004d99"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:textSize="25dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,15 +67,29 @@
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="#004d99"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Best time: 0"
+        android:text="All time best: 0"
         android:id="@+id/textView4"
-        android:layout_marginTop="52dp"
+        android:textColor="#004d99"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Current best: 0"
+        android:id="@+id/textView5"
+        android:textColor="#004d99"
+        android:textSize="20dp"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
